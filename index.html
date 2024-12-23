@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+            scroll-behavior:smooth;
+
+        }
+      .section1 {
+        background-color: none;
+        /* width: 95vw; */
+        height: 100vh;
+        background-image: url("/images/bg.jpg");
+        background-repeat: none;
+        background-size: cover;
+        background-position: center;
+      }
+      .navbar {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        padding: 15px;
+        display: flex;
+        width: 100%;
+        position:sticky;
+        top:0;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 20px;
+        width: 100%;
+      }
+      li {
+        list-style: none;
+        display: inline-block;
+      }
+      .website {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 2rem;
+      }
+      .website a {
+        text-align: left;
+        margin-left: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+      }
+      .website ul {
+        align-items: flex-end;
+      }
+      ul li a {
+        font-size: 18px;
+        font-weight: bold;
+        margin-right: 30px;
+        text-transform: uppercase;
+        position: relative;
+      }
+      a {
+        text-decoration: none;
+      }
+      ul li a::after{
+content:"" ;
+height:1px;
+position:absolute;
+background-color:red;
+bottom: 0;
+left:0;
+width: 0%;
+transition:1s ease;
+
+
+      }
+      ul li a:hover::after{
+width: 100%;
+      }
+      ul li a:hover{
+        color:red
+      }
+      .mid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 4rem;
+        width: 100%;
+      }
+      .photo {
+        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+        overflow: hidden;
+        border: 1px solid white;
+        object-fit: contain;
+      }
+      .photo img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+
+      .mid h1 {
+        padding-top:2rem;
+        position: center;
+
+        text-align: center;
+        color: white;
+      }
+      h3 {
+        position: center;
+        text-decoration: none;
+        text-align: center;
+        color: white;
+
+      }
+
+      .section2 {
+        height: 500px;
+        width: 100%;
+      }
+      .section2 h1,
+      .section3 h1,
+      .section4 h1 {
+        color: black;
+        padding-top: 2rem;
+        text-align: center;
+        
+      }
+      .section2 h5,
+      .section4 h5 {
+        color: black;
+        text-align: center;
+        justify-content: center;
+        padding: 2rem 2rem;
+      }
+      .section2 .skills {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 2%;
+        row-gap: 1rem;
+      }
+      .section2 .skills div {
+        width: 100%;
+        border-radius: 5px;
+      }
+      .section2 .skills div .outline {
+        width: 100%;
+        background-color: rgb(218, 218, 218);
+        height: 6px;
+      }
+      .section2 .skills div .inline {
+        background: linear-gradient(to right,skyblue,blue);
+        height: 100%;
+      }
+
+      .section3 {
+        /* height: 100%; */
+        /* width: 100%; */
+        background-image: url("/images/bw1.jpg");
+        background-repeat: none;
+        background-size: cover;
+        text-align: center;
+      }
+
+      .section3 h5 {
+        color: black;
+        text-align: center;
+        justify-content: center;
+        padding: 2rem 2rem;
+        
+      }
+      section {
+        padding: 40px 100px !important;
+      }
+
+      .section3 .classes {
+        height: 500px;
+        width: 100%;
+        display: flex;
+        column-gap: 20px;
+        font-size: 20px;
+        padding: 2rem;
+        column-gap: 30px;
+      }
+      .section3 .classes div {
+        border: 1px skyblue solid;
+        height: 400px;
+        box-shadow: 0px 0px 10px rgba(160, 160, 160, 0.774);
+    border-radius: 5px;
+    transition: 0.5 ease-in;
+    cursor: pointer;
+      }
+      .section3 .classes div:hover{
+      
+        box-shadow: 0px 0px 12px rgba(68, 68, 68, 0.774);
+        transform: scale(1.1);
+      }
+    .section3 i{
+    font-size: 30px;
+    margin-top: 2rem !important;
+     color: brown;
+    } 
+    .section3 i:hover{
+      color: blue;
+    }
+    
+    .section3 p {
+        color: black;
+        font-weight: bold;
+        text-align: center;
+        font-size: 25px;
+        /* margin-top: 1rem; */
+      }
+    </style>
+    <link rel="stylesheet" href="myStyle.css">
+    
+  </head>
+  <body>
+    <section class="section1">
+      <nav class="navbar">
+        <div class="container">
+          <div class="website">
+            <a href="#">My Website</a>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="about.html">about</a></li>
+              <li><a href="#education">Education</a></li>
+              <li><a href="#">pages</a></li>
+              <li><a href="#contact">contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav> 
+      <div class="mid">
+        <div class="photo">
+          <img src="images/me.jpg" alt="images" />
+        </div>
+        <h1>Hello! I am Ashmita Shrestha</h1>
+        <br />
+        <h3>Frontend Developer</h3>
+      </div>
+    </section>
+
+    <section class="section2">
+      <h1>Welcome To My Site</h1>
+      <h5>
+        Explore and enjoy the experience.
+        Showcasing my work in web design, development, and creating seamless user experiences.
+      </h5>
+      <div class="skills">
+        <div>
+          <p>HTML/CSS</p>
+          <div class="outline">
+            <div class="inline" style="width: 95%"></div>
+          </div>
+        </div>
+        <div>
+          <p>Bootstrap</p>
+          <div class="outline">
+            <div class="inline" style="width: 90%"></div>
+          </div>
+        </div>
+        <div>
+          <p>JavaScript</p>
+          <div class="outline">
+            <div class="inline" style="width: 65%"></div>
+          </div>
+        </div>
+        <div>
+          <p>PHP</p>
+          <div class="outline">
+            <div class="inline" style="width: 65%"></div>
+          </div>
+        </div>
+        <div>
+          <p>React</p>
+          <div class="outline">
+            <div class="inline" style="width: 80%"></div>
+          </div>
+        </div>
+        <div>
+          <p>MySQL</p>
+          <div class="outline">
+            <div class="inline" style="width: 75%"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section3">
+      <h1>I'm Available For Hire</h1>
+      <h5>
+        I’m available for freelance and full-time opportunities to bring your web projects to life.
+      </h5>
+
+      <div class="classes"> 
+        <div class="class1" style="width: 500px">
+          <i class="bi bi-pc-display-horizontal"></i>
+          <p>Designing</p>
+
+          <h5>
+            Designing is the art of transforming ideas into visually engaging and 
+            functional creations that communicate a message or solve a problem.
+          </h5>
+        </div>
+        <div class="class2" style="width: 500px">
+          <i class="bi bi-pencil-square"></i>
+          <p>Developing</p>
+          <h5>
+            Developing is the process of building and refining functional systems,
+            applications, or solutions through coding, testing, and iteration.
+          </h5>
+        </div>
+        <div class="class3" style="width: 500px">
+          <i class="bi bi-front"></i>
+          <p>Responsive</p>
+          <h5>
+            Responsive design ensures a seamless and optimal user
+             experience across a wide range of devices and screen sizes.
+          </h5>
+        </div>
+      </div>
+    </section>
+
+    <section class="section4">
+      <h1>I Love What I Do</h1>
+      <h5>
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+        cubilia Curae; Nulla mollis dapibus nunc, ut rhoncus turpis sodales
+        quis. Integer sit amet mattis quam.
+      </h5>
+    </section>
+
+    <section class="section5">
+      <div class="column1">
+        <h1>Certificate</h1>
+        <!-- <div class="sec1">
+            <h2>2018-now</h2>
+          <h3>Fulltime Freelancer</h3>
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+            quae ab illo inventore veritatis et quasi architecto beatae.
+          </p>
+        </div> -->
+        <div class="sec2">
+            <h2>JAN 2024</h2>
+          <h3>Digital Marketing</h3>
+          <p>
+             Online Digital Marketing Course.
+          </p>
+        </div>
+        <div class="sec3">
+            <h2>2074</h2>
+          <h3>Diploma in Graphic Designing</h3>
+          <p>
+           Basic Graphic Designing in Photoshop by SEDUCON.
+          </p>
+        </div>
+      </div>
+      <div class="column2">
+        <h1 id="education">Education </h1>
+        <div class="sec1">
+            <h2>2020-NOW</h2>
+          <h3>Bachelor in Information Management</h3>
+          <p>
+           Learned different programming language such as html,css,javascript,java ,php,C programming .
+          </p>
+        </div>
+        <div class="sec2">
+            <h2>2018</h2>
+          <h3>+2 in Management</h3>
+          <p>
+          Major subject Computer Science.
+          </p>
+        </div>
+        <div class="sec3">
+            <h2>2016</h2>
+          <h3>S.E.E</h3>
+          <p>
+           
+          </p>
+        </div>  
+      </div>
+    </section>
+
+    <section class="section8" id="contact"> 
+      <form action="">
+        <div class="form">
+        <h1>Want to get in touch?<br>
+            Find me on Phone,Email or Linkedin.</h1>
+        <input type="text" placeholder="Enter your name"><br>
+        <input type="mail" name="mail" id="" placeholder="Enter your mail"><br>
+        <input type="text" name="sub" id="" placeholder="Subject"><br>
+        <input type="text" name="message" id="" placeholder="Enter your message"><br>
+  <button>send</button> 
+    </div>
+    </form>
+  </section8>
+  
+
+    </section>
+    <section class="section7">
+      <div class="icons">
+      <a href="#"><i class="bi bi-facebook"></i></a>
+      <a href="#"><i class="bi bi-twitter"></i></a>
+      <a href="#"><i class="bi bi-instagram"></i></a>
+      <a href="#"><i class="bi bi-google"></i></a>
+      <a href="#"><i class="bi bi-linkedin"></i></a>
+    </div>
+      <h4>&copy; 2020 My Website. All rights reserved | Designed by W3layouts</h4>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

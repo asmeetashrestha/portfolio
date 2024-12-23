@@ -1,0 +1,123 @@
+.section5{
+   background-image: url("images/bww.jpeg");
+   background-repeat: none;
+   background-size: cover;
+   background-position: center;
+   display:grid;
+   grid-template-columns: 50% 50%;
+   column-gap: 10px;
+   color: white;
+}
+.section5 h2{
+    border: 2px solid green;
+    display: inline;
+    width: fit-content;
+    padding: 8px 20px;
+  
+   
+}
+.section5 h1{
+    padding: 3rem;
+}
+.section5 h3{
+    font-size:25px;
+    text-align: left;
+    padding: 5px;
+
+}
+.section5 div{
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    position: relative;
+}
+.section5 p{
+    text-align: left;
+    padding: 5px;
+}
+.section5 div div::after{
+content: "";
+position: absolute;
+height: 2px;
+width: 100%;
+background-color: white;
+bottom: 0;
+}
+
+.section7{
+   background-color: black;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   
+}
+.section7 a i{
+    margin-top: 2rem;
+    text-align: center;
+    font-size: larger;
+}
+.section7 h4{
+    color: white;
+    text-align: center;
+    font-size: medium;
+    padding: 20px;
+    
+
+}
+.section7 h4{
+    position:relative;
+}
+.section7 h4::after {
+    content: "";
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    top: 10%;
+    left: 0; /* Move exactly below the element */
+}
+.section8 .form{
+    text-align:center;
+
+  }
+  .section8 .form h1{
+    color: black;
+    padding-bottom: 2rem;
+  }
+  .section8 .form input{
+    height:50px;
+    width: 500px;
+    margin:1rem 0 1rem 0;
+    border-radius:100px ;
+    padding: 0 16px;
+    outline: none;
+  }
+  .section8 .form button{
+    height:50px;
+    width:500px;
+    background-color: gray;
+    color:white;
+    border-radius:100px;
+    border: none;
+    outline: none;
+  }
+  .section8 .form input:focus{
+    border: 2px solid skyblue;
+  }
+  .section8 .form button:focus{
+    border: 2px solid skyblue;
+  }
+  .section8{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+position: relative;
+margin-top:2rem;
+
+}
+    
